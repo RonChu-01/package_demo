@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>860</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>860</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>60</y>
+       <width>248</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>30</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_point_1">
+        <property name="text">
+         <string>您当前没有可以打包的游戏点击</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_point_2">
+        <property name="text">
+         <string>创建游戏</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>771</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>20</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>30</number>
+      </property>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="pushButton_dl_pk">
+        <property name="text">
+         <string>下载母包</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_game_status_2">
+        <property name="text">
+         <string>已上线</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_pk_addr_point">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">:/img/star.png</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEdit_output_addr"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_output_name">
+        <property name="text">
+         <string>输出文件名</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="lineEdit_pk_addr"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_pk_addr">
+        <property name="text">
+         <string>母包地址</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="pushButton_chose_pk">
+        <property name="text">
+         <string>选择母包</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_game_status">
+        <property name="text">
+         <string>游戏状态</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="lineEdit_sign"/>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="pushButton_output_addr">
+        <property name="text">
+         <string>存放路径</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_sign">
+        <property name="text">
+         <string>签名证书</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="pushButton_sign">
+        <property name="text">
+         <string>签名证书</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_output_addr">
+        <property name="text">
+         <string>输出路径</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="lineEdit_output_name"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>812</width>
+       <height>468</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QWidget" name="widget_channel_tab" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>800</width>
+          <height>50</height>
+         </size>
+        </property>
+        <widget class="QLabel" name="label_select_1">
+         <property name="geometry">
+          <rect>
+           <x>307</x>
+           <y>18</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">:/img/yixuan.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_select_2">
+         <property name="geometry">
+          <rect>
+           <x>329</x>
+           <y>18</y>
+           <width>96</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>已选择打包渠道：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_select_3">
+         <property name="geometry">
+          <rect>
+           <x>431</x>
+           <y>18</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_not_available_1">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>20</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">:/img/weipeizhi.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_not_available_2">
+         <property name="geometry">
+          <rect>
+           <x>162</x>
+           <y>20</y>
+           <width>72</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>未配置渠道：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_not_available_3">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>20</y>
+           <width>18</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>926</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_available_1">
+         <property name="geometry">
+          <rect>
+           <x>23</x>
+           <y>20</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">:/img/kexuan.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_available_2">
+         <property name="geometry">
+          <rect>
+           <x>45</x>
+           <y>20</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>可用：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_available_3">
+         <property name="geometry">
+          <rect>
+           <x>87</x>
+           <y>20</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QWidget" name="widget_channel_list" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>240</width>
+              <height>360</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_select_all" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>240</width>
+              <height>40</height>
+             </size>
+            </property>
+            <widget class="QCheckBox" name="checkBox">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>全选</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_select_channel_list" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>560</width>
+            <height>400</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>802</width>
+       <height>438</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QWidget" name="widget_unpack_tab" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>800</width>
+          <height>40</height>
+         </size>
+        </property>
+        <widget class="QPushButton" name="pushButton_unpack">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>90</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>出包中（0）</string>
+         </property>
+         <property name="icon">
+          <iconset resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">
+           <normaloff>:/img/chubaozhong.png</normaloff>:/img/chubaozhong.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_success">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>10</y>
+           <width>90</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>成功（0）</string>
+         </property>
+         <property name="icon">
+          <iconset resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">
+           <normaloff>:/img/成功.png</normaloff>:/img/成功.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_test">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>10</y>
+           <width>90</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>已测试（0）</string>
+         </property>
+         <property name="icon">
+          <iconset resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">
+           <normaloff>:/img/07-大拇指.png</normaloff>:/img/07-大拇指.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_fail">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>10</y>
+           <width>90</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>失败（0）</string>
+         </property>
+         <property name="icon">
+          <iconset resource="C:/Users/chuyong/Desktop/img/stack_page.qrc">
+           <normaloff>:/img/weipeizhi.png</normaloff>:/img/weipeizhi.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget_2">
+        <property name="minimumSize">
+         <size>
+          <width>800</width>
+          <height>390</height>
+         </size>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="page_6"/>
+        <widget class="QWidget" name="page_7"/>
+        <widget class="QWidget" name="page_8"/>
+        <widget class="QWidget" name="page_9"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="C:/Users/chuyong/Desktop/img/stack_page.qrc"/>
+ </resources>
+ <connections/>
+</ui>

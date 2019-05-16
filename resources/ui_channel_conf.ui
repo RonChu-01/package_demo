@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>633</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>630</width>
+     <height>445</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>620</width>
+        <height>35</height>
+       </size>
+      </property>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>54</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>渠道名</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="C:/Users/chuyong/Desktop/img/channel_conf.qrc">:/img/exit2.png</pixmap>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>400</height>
+         </size>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>客户端参数</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>470</width>
+          <height>400</height>
+         </size>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>401</width>
+           <height>267</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="packageIDLabel">
+            <property name="text">
+             <string>PackageID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="packageIDLineEdit"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="aPPIDLabel">
+            <property name="text">
+             <string>APPID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="aPPIDLineEdit"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="aPPKEYLabel">
+            <property name="text">
+             <string>APPKEY</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="aPPKEYLineEdit"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="iDLabel">
+            <property name="text">
+             <string>厂商ID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="iDLineEdit"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="Label">
+            <property name="text">
+             <string>服务器序列号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="LineEdit"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="Label_2">
+            <property name="text">
+             <string>包名</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="LineEdit_2"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="productCodeLabel">
+            <property name="text">
+             <string>ProductCode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="productCodeLineEdit"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="Label_3">
+            <property name="text">
+             <string>横竖屏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="LineEdit_3"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>60</y>
+           <width>371</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>30</y>
+           <width>351</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>此处仅列出客户端参数、自定义参数，服务端参数不在此处显示</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="C:/Users/chuyong/Desktop/img/channel_conf.qrc"/>
+ </resources>
+ <connections/>
+</ui>

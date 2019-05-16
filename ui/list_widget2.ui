@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>149</width>
+    <height>253</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>131</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>我截图</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list3.qrc">
+      <normaloff>:/image/login/fly.png</normaloff>:/image/login/fly.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>个搭嘎</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/apple.png</normaloff>:/icon/apple.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>很反感</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/banana.png</normaloff>:/icon/banana.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>沃尔沃</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/circle.png</normaloff>:/icon/circle.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>恢复到韩国</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/exit.png</normaloff>:/icon/exit.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>客户卡</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/knife.png</normaloff>:/icon/knife.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>且更符合</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/passwd.png</normaloff>:/icon/passwd.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>高合金钢</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/quit.png</normaloff>:/icon/quit.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巨好看</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/sword.png</normaloff>:/icon/sword.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>金凯利</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../image/login/list.qrc">
+      <normaloff>:/icon/user.png</normaloff>:/icon/user.png</iconset>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../image/login/list.qrc"/>
+  <include location="../image/login/list3.qrc"/>
+  <include location="../image/login/list2.qrc"/>
+ </resources>
+ <connections/>
+</ui>

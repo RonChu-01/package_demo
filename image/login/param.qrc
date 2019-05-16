@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="image/login">
+    <file>apple.png</file>
+    <file>banana.png</file>
+    <file>circle.png</file>
+    <file>exit.png</file>
+    <file>fly.png</file>
+  </qresource>
+</RCC>

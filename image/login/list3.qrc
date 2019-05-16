@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="image/login">
+    <file>apple.png</file>
+    <file>banana.png</file>
+    <file>circle.png</file>
+    <file>exit.png</file>
+    <file>fly.png</file>
+    <file>knife.png</file>
+    <file>list.qrc</file>
+    <file>list2.qrc</file>
+    <file>passwd.png</file>
+    <file>quit.png</file>
+    <file>sword.png</file>
+    <file>test.qrc</file>
+    <file>user.png</file>
+  </qresource>
+</RCC>
