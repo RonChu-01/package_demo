@@ -55,6 +55,7 @@ class Window(QWidget):
             left_item.setSizeHint(QSize(0, 50))
             # 注意，这里是通过循环动态生成自定义控件，这里传参相当于是存在多个实例属性
             left_widget = LeftItemWidget(left_item, self.check_all, self.left_list)
+            print(left_widget.checkbox)
             self.left_list.setItemWidget(left_item, left_widget)
 
 
