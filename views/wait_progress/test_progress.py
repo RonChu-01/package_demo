@@ -2,6 +2,7 @@ from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QDesktopWidget, QMainWindow, QWidget, QPushButton, QApplication
 
 from wait_progress.progress_2 import *
+# from wait_progress.progress import *
 import sys
 
 

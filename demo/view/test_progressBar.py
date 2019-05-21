@@ -77,24 +77,20 @@ class Window(QWidget):
         super(Window, self).__init__(*args, **kwargs)
         self.resize(800, 600)
         layout = QVBoxLayout(self)
-        # layout.addWidget(
-        #     ProgressBar(self, minimum=0, maximum=100, objectName="RedProgressBar"))
-        # layout.addWidget(  # 繁忙状态
-        #     ProgressBar(self, minimum=0, maximum=0, objectName="RedProgressBar"))
 
         layout.addWidget(
             ProgressBar(self, minimum=0, maximum=100, textVisible=False,
                         objectName="GreenProgressBar"))
-        # layout.addWidget(
-        #     ProgressBar(self, minimum=0, maximum=0, textVisible=False,
-        #                 objectName="GreenProgressBar"))
-        #
-        # layout.addWidget(
-        #     ProgressBar(self, minimum=0, maximum=100, textVisible=False,
-        #                 objectName="BlueProgressBar"))
-        # layout.addWidget(
-        #     ProgressBar(self, minimum=0, maximum=0, textVisible=False,
-        #                 objectName="BlueProgressBar"))
+        layout.addWidget(
+            ProgressBar(self, minimum=0, maximum=0, textVisible=False,
+                        objectName="GreenProgressBar"))
+
+        layout.addWidget(
+            ProgressBar(self, minimum=0, maximum=100, textVisible=False,
+                        objectName="BlueProgressBar"))
+        layout.addWidget(
+            ProgressBar(self, minimum=0, maximum=0, textVisible=False,
+                        objectName="BlueProgressBar"))
 
 
 if __name__ == "__main__":

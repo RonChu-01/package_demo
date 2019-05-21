@@ -85,15 +85,15 @@ class Window(QWidget):
         """
         # 发送自定义事件，解决复选框选中无法选中当前行的问题
         # 注意一个问题，这里的事件一定要放在槽函数的最前面执行，否则会出现行选中紊乱错误（获取当前行时会报错）
-        # event = QMouseEvent(QEvent.MouseButtonPress, QPoint(0, 0), Qt.RightButton, Qt.RightButton, Qt.NoModifier)
-        # QApplication.sendEvent(self.sender(), event)
+        event = QMouseEvent(QEvent.MouseButtonPress, QPoint(0, 0), Qt.RightButton, Qt.RightButton, Qt.NoModifier)
+        QApplication.sendEvent(self.sender(), event)
 
-        for index in range(self.left_list.count()):
-            check_box = self.left_list.itemWidget(self.left_list.item(index)).checkbox
-            if self.sender() == check_box:
-                self.left_list.item(index).setCheckState(True)
-                print(self.left_list.item(index))
-                print(index)
+        # for index in range(self.left_list.count()):
+        #     check_box = self.left_list.itemWidget(self.left_list.item(index)).checkbox
+        #     if self.sender() == check_box:
+        #         self.left_list.item(index).setCheckState(True)
+        #         print(self.left_list.item(index))
+        #         print(index)
 
         result = {
             "left_row": 0,
