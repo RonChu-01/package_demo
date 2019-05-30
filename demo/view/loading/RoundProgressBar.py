@@ -7,11 +7,12 @@ Created on 2018年9月4日
 @site: https://pyqt5.com , https://github.com/892768447
 @email: 892768447@qq.com
 @file: 界面美化.圆形进度条.CircleProgressBar
-@description:
+@description: 
 """
-from PyQt5.QtCore import QSize, pyqtProperty, QTimer, Qt, QRect
-from PyQt5.QtGui import QColor, QPainter, QFont, QMovie
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QTextEdit, QGridLayout, QPushButton, QMainWindow, QLabel
+from PyQt5.QtCore import QSize, pyqtProperty, QTimer, Qt
+from PyQt5.QtGui import QColor, QPainter
+from PyQt5.QtWidgets import QWidget, QHBoxLayout
+
 
 __Author__ = """By: Irony
 QQ: 892768447
@@ -46,10 +47,6 @@ class CircleProgressBar(QWidget):
         painter.save()
         painter.setPen(Qt.NoPen)
         color = self.Color.toRgb()
-
-        painter.setFont(QFont("Arial", 30))
-        painter.drawText(event.rect(), Qt.AlignCenter, "loading")
-
         for i in range(11):
             color.setAlphaF(1.0 * i / 10)
             painter.setBrush(color)
@@ -90,56 +87,20 @@ class CircleProgressBar(QWidget):
             self.update()
 
     def sizeHint(self) -> QSize:
-        return QSize(200, 200)
-
-
-class Loading(QWidget):
-
-    def __init__(self, *args, **kwargs):
-        super(Loading, self).__init__(*args, **kwargs)
-        layout = QHBoxLayout(self)
-        self.git = QMovie('loading.gif')
-        self.label = QLabel()
-        self.label.setMovie(self.git)
-        self.git.start()
-        layout.addWidget(self.label)
-
-        self.setGeometry(0, 0, 300, 300)
-        # self.label.setAlignment(Qt.AlignCenter)
+        return QSize(100, 100)
 
 
 class Window(QWidget):
 
     def __init__(self, *args, **kwargs):
         super(Window, self).__init__(*args, **kwargs)
-
-        layout = QGridLayout()
-
-        self.editor = QTextEdit()
-        self.editor.setPlainText('0123456789'*100)
-
-        layout.addWidget(self.editor, 0, 0, 1, 3)
-        self.btn = QPushButton('wait')
-        layout.addWidget(self.btn, 1, 1, 1, 1)
-        self.setLayout(layout)
-
-        # self.loading = CircleProgressBar(self)
-        # self.loading.hide()
-        # btn.clicked.connect(self.loading.show)
-
-        self.loading2 = Loading(self)
-        self.loading2.hide()
-
-        self.btn.clicked.connect(self.do_something)
-
-    def do_something(self):
-        self.editor.hide()
-        self.btn.hide()
-        self.loading2.show()
-
-    # def resizeEvent(self, event):
-    #     self.loading.resize(event.size())
-    #     event.accept()
+        layout = QHBoxLayout(self)
+        layout.addWidget(CircleProgressBar(self))
+        # layout.addWidget(CircleProgressBar(
+        #     self, color=QColor(255, 0, 0), clockwise=False))
+        # layout.addWidget(CircleProgressBar(self, styleSheet="""
+        #     qproperty-color: rgb(0, 255, 0);
+        # """))
 
 
 if __name__ == '__main__':

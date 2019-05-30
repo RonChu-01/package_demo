@@ -31,15 +31,16 @@ class Window(QWidget):
         # 去掉超链接下划线
         self.label.setText('''<style> a {text-decoration: none} </style> 
         <a href='http://stackoverflow.com'>stackoverflow</a>''')
+
         # self.label.setText('''stackoverflow''')
 
-        # self.label.setOpenExternalLinks(True)  # 使用这句话就会不会触发linkActivated信号
+        self.label.setOpenExternalLinks(True)  # 使用这句话就会不会触发linkActivated信号
 
         h_box = QHBoxLayout()
         h_box.addWidget(self.label)
         self.setLayout(h_box)
 
-        self.label.linkActivated.connect(self.do_something)
+        # self.label.linkActivated.connect(self.do_something)
 
     def do_something(self):
         self.label.setText('''
