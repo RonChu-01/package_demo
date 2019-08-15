@@ -2,7 +2,8 @@
 # Created by #chuyong, on 2019/8/14.
 # Copyright (c) 2019 3KWan.
 # Description :
-
+import queue
+from queue import Queue
 import cgitb
 
 from PyQt5.QtCore import QSize, pyqtSignal, Qt
@@ -10,20 +11,22 @@ from PyQt5.QtWidgets import QWidget, QApplication, QListWidgetItem, QListWidget,
 
 from qlistwidget.ui.ui_main import Main_Ui_Form
 from qlistwidget.ui.ui_first_item import First_Ui_Form
+from qlistwidget.ui.ui_second_item import Second_Ui_Form
 
 cgitb.enable(format="text")
 
 
 class FirstItemWidget(QWidget, First_Ui_Form):
-    """  第一个列表item """
+    """  第一个列表item_widget """
 
     del_item = pyqtSignal(object)  # 删除信号
-    check_item = pyqtSignal(object, object)  # 勾选复选框
+    check_item = pyqtSignal(object, object, str)  # 勾选复选框
 
     def __init__(self, item, text, *args, **kwargs):
         super(FirstItemWidget, self).__init__(*args, **kwargs)
         self.setupUi(self)
         self.item = item
+        self.text = str(text)
         self.lb_no.setText("咸鱼{0}号".format(str(text)))
         self.btn_del.clicked.connect(self.do_delete_item)
         self.cbx.stateChanged.connect(self.do_check_item)
@@ -41,7 +44,18 @@ class FirstItemWidget(QWidget, First_Ui_Form):
         勾选item
         :return:
         """
-        self.check_item.emit(self.item, state)
+        self.check_item.emit(self.item, state, self.text)
+
+
+class SecondItemWidget(QWidget, Second_Ui_Form):
+    """  第二个列表item_widget """
+
+    def __init__(self, item, text, *args, **kwargs):
+        super(SecondItemWidget, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+        self.item = item
+        self.text = text
+        self.label.setText(str(text))
 
 
 class Window(QWidget, Main_Ui_Form):
@@ -53,10 +67,16 @@ class Window(QWidget, Main_Ui_Form):
         self.init()
 
         self.index_ = 0  # list计数
+        self.select_item_info = Queue()  # 第一个列表已选择item
+        self.second_list_info = Queue()  # 保存第一个列表勾选内容用于生成第二个列表
 
         v_box = QVBoxLayout(self.wdt_content)
         self.first_list = QListWidget(self)
         v_box.addWidget(self.first_list)
+
+        v_box_second = QVBoxLayout(self.second_wdt_content)
+        self.second_list = QListWidget(self)
+        v_box_second.addWidget(self.second_list)
 
     def init(self):
         self.btn_first.clicked.connect(self.do_switch_page)
@@ -64,6 +84,48 @@ class Window(QWidget, Main_Ui_Form):
         self.btn_three.clicked.connect(self.do_switch_page)
         self.btn_add.clicked.connect(self.do_init_first_list)
         self.btn_clear.clicked.connect(self.do_clear_first_list)
+        self.first_btn_choose.clicked.connect(self.do_pass_select_item)
+        self.btn_second.clicked.connect(self.do_init_second_list)
+
+    def do_init_second_list(self):
+        """
+        初始化第二个列表
+        :return:
+        """
+
+        if self.second_list_info.qsize() == 0:
+            return
+
+        try:
+            for i in range(self.second_list_info.qsize()):
+                # 无等待取值，队列为空时，抛出异常
+                item_, text = self.second_list_info.get_nowait()  # 元组拆包
+                item = QListWidgetItem(self.second_list)
+                item.setSizeHint(QSize(0, 60))
+                widget = SecondItemWidget(item, text)
+                self.second_list.setItemWidget(item, widget)
+        except queue.Empty as e:
+            pass
+
+    def do_pass_select_item(self):
+        """
+        第一个列表点击通过按钮
+        :return:
+        """
+        if self.select_item_info.qsize() == 0:
+            return
+
+        for i in range(self.select_item_info.qsize()):
+            # 队列为空，会阻塞
+            item, text = self.select_item_info.get()
+            self.second_list_info.put((item, text))
+            index = self.first_list.indexFromItem(item).row()
+            self.first_list.takeItem(index)
+            self.first_list.removeItemWidget(item)
+            del item
+
+        if self.first_list.count() == 0:
+            self.index_ = 0
 
     def do_init_first_list(self):
         """
@@ -79,19 +141,21 @@ class Window(QWidget, Main_Ui_Form):
         self.first_list.setItemWidget(item, widget)
         self.index_ += 1
 
-    def do_select_item(self, item, state):
+    def do_select_item(self, item, state, text):
         """
         选择复选框
         :param item:
         :param state:
+        :param text:
         :return:
         删除item，可以点击的时候保存item信息再执行删除，不用for循环？
         """
         index = self.first_list.indexFromItem(item).row()
         if state == Qt.Checked:
-            print(index)
+            self.select_item_info.put((item, text))
         elif state == Qt.Unchecked:
-            pass
+            # 队列为空，会阻塞
+            self.select_item_info.get()
 
     def do_del_item(self, item):
         """
