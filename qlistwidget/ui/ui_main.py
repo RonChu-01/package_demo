@@ -1,0 +1,101 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ui_main.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Main_Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(800, 500)
+        self.stackedWidget = QtWidgets.QStackedWidget(Form)
+        self.stackedWidget.setGeometry(QtCore.QRect(20, 60, 780, 430))
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.first = QtWidgets.QWidget()
+        self.first.setObjectName("first")
+        self.first_wdt_bottom = QtWidgets.QWidget(self.first)
+        self.first_wdt_bottom.setGeometry(QtCore.QRect(0, 390, 780, 40))
+        self.first_wdt_bottom.setObjectName("first_wdt_bottom")
+        self.first_cbx_select_all = QtWidgets.QCheckBox(self.first_wdt_bottom)
+        self.first_cbx_select_all.setGeometry(QtCore.QRect(30, 10, 81, 16))
+        self.first_cbx_select_all.setObjectName("first_cbx_select_all")
+        self.first_btn_choose = QtWidgets.QPushButton(self.first_wdt_bottom)
+        self.first_btn_choose.setGeometry(QtCore.QRect(680, 0, 75, 31))
+        self.first_btn_choose.setObjectName("first_btn_choose")
+        self.wdt_content = QtWidgets.QWidget(self.first)
+        self.wdt_content.setGeometry(QtCore.QRect(0, 0, 781, 391))
+        self.wdt_content.setObjectName("wdt_content")
+        self.stackedWidget.addWidget(self.first)
+        self.second = QtWidgets.QWidget()
+        self.second.setObjectName("second")
+        self.second_wdt_content = QtWidgets.QWidget(self.second)
+        self.second_wdt_content.setGeometry(QtCore.QRect(0, 0, 780, 391))
+        self.second_wdt_content.setObjectName("second_wdt_content")
+        self.second_wdt_bottom = QtWidgets.QWidget(self.second)
+        self.second_wdt_bottom.setGeometry(QtCore.QRect(0, 390, 780, 40))
+        self.second_wdt_bottom.setObjectName("second_wdt_bottom")
+        self.second_cbx_select_all = QtWidgets.QCheckBox(self.second_wdt_bottom)
+        self.second_cbx_select_all.setGeometry(QtCore.QRect(30, 10, 91, 16))
+        self.second_cbx_select_all.setObjectName("second_cbx_select_all")
+        self.second_btn_upload = QtWidgets.QPushButton(self.second_wdt_bottom)
+        self.second_btn_upload.setGeometry(QtCore.QRect(680, 0, 75, 31))
+        self.second_btn_upload.setObjectName("second_btn_upload")
+        self.stackedWidget.addWidget(self.second)
+        self.three = QtWidgets.QWidget()
+        self.three.setObjectName("three")
+        self.pb_1 = QtWidgets.QProgressBar(self.three)
+        self.pb_1.setGeometry(QtCore.QRect(40, 60, 441, 20))
+        self.pb_1.setProperty("value", 24)
+        self.pb_1.setObjectName("pb_1")
+        self.btn_download_1 = QtWidgets.QPushButton(self.three)
+        self.btn_download_1.setGeometry(QtCore.QRect(560, 57, 75, 31))
+        self.btn_download_1.setObjectName("btn_download_1")
+        self.btn_download_2 = QtWidgets.QPushButton(self.three)
+        self.btn_download_2.setGeometry(QtCore.QRect(560, 120, 75, 31))
+        self.btn_download_2.setObjectName("btn_download_2")
+        self.pb_2 = QtWidgets.QProgressBar(self.three)
+        self.pb_2.setGeometry(QtCore.QRect(40, 123, 441, 20))
+        self.pb_2.setProperty("value", 24)
+        self.pb_2.setObjectName("pb_2")
+        self.stackedWidget.addWidget(self.three)
+        self.btn_first = QtWidgets.QPushButton(Form)
+        self.btn_first.setGeometry(QtCore.QRect(30, 20, 75, 31))
+        self.btn_first.setObjectName("btn_first")
+        self.btn_second = QtWidgets.QPushButton(Form)
+        self.btn_second.setGeometry(QtCore.QRect(120, 20, 75, 31))
+        self.btn_second.setObjectName("btn_second")
+        self.btn_three = QtWidgets.QPushButton(Form)
+        self.btn_three.setGeometry(QtCore.QRect(210, 20, 75, 31))
+        self.btn_three.setObjectName("btn_three")
+        self.btn_add = QtWidgets.QPushButton(Form)
+        self.btn_add.setGeometry(QtCore.QRect(300, 20, 75, 31))
+        self.btn_add.setObjectName("btn_add")
+        self.btn_clear = QtWidgets.QPushButton(Form)
+        self.btn_clear.setGeometry(QtCore.QRect(390, 20, 75, 31))
+        self.btn_clear.setObjectName("btn_clear")
+
+        self.retranslateUi(Form)
+        self.stackedWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.first_cbx_select_all.setText(_translate("Form", "全部都要"))
+        self.first_btn_choose.setText(_translate("Form", "就你了"))
+        self.second_cbx_select_all.setText(_translate("Form", "全部都要"))
+        self.second_btn_upload.setText(_translate("Form", "上传"))
+        self.btn_download_1.setText(_translate("Form", "下载"))
+        self.btn_download_2.setText(_translate("Form", "下载"))
+        self.btn_first.setText(_translate("Form", "First"))
+        self.btn_second.setText(_translate("Form", "Second"))
+        self.btn_three.setText(_translate("Form", "Three"))
+        self.btn_add.setText(_translate("Form", "Add"))
+        self.btn_clear.setText(_translate("Form", "Clear"))
+
+
